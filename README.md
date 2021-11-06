@@ -1,5 +1,5 @@
 ![current WCAG version 2.1](https://img.shields.io/badge/current%20version-WCAG%202.1-%230a5470?style=flat)
-# WCAG Success Criteria Tests
+# WCAG Filter Tool
 The intention is to reduce the variance of testing for web accessibility between professionals and people who have an interest in accessibility. Agreeing on what constitutes a failure is the first step towards testing in a consistent way and having consistent results.
 
 ## The Categories
