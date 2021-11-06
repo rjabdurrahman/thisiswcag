@@ -7,15 +7,17 @@ The success criteria are grouped according to what part of the website you're de
 
 i.e. if your website doesn't have video or audio content you don't need to test against those criteria.
 
-- Default View (all WCAG success criteria)
-- Forms and UI
-- Custom Controls
-- Dynamic UI
-- Content
-- Font Size and Colour
-- Structure
-- Without Audio/Video
-- Audio/Video
+- all (all WCAG success criteria)
+- content
+- custom Controls
+- forms and UI
+- audio / video
+- structure
+- colour
+- font-size
+- dynamic content
+- keyboard
+- link
 
 ### Using the tests
 Each test is written in a way which is clear to understand and straightforward to apply to web content. Accessibility guidance for font sizing:
