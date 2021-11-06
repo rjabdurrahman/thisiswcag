@@ -8,18 +8,18 @@ Portions of the tests are sourced from the [Deque University](https://dequeunive
 These cateogries group the [WCAG 2.1 level AA success criteria](https://www.w3.org/TR/WCAG21/) according to what part of the website you're developing. Allowing you to focus on the relevant criteria you need to apply and understand versus the criteria which can be ignored. 
 
 > i.e. if your website doesn't have video or audio content you don't need to test against those criteria.
-- [Default View (all WCAG success criteria)](https://www.notion.so/ce7f793eefe24a5da585420796a58a3a?v=8abb13a3af9b40d48c3099289e7dfbc3)
-- [Forms and UI](https://www.notion.so/ce7f793eefe24a5da585420796a58a3a?v=d32b0032ed55407b95a422c450e94ef5)
-- [Custom Controls](https://www.notion.so/ce7f793eefe24a5da585420796a58a3a?v=2c170a694a9246a98d9cd5acc5754016)
-- [Dynamic UI](https://www.notion.so/ce7f793eefe24a5da585420796a58a3a?v=f910905db416446fa34ae6aa107a19ad)
-- [Content](https://www.notion.so/ce7f793eefe24a5da585420796a58a3a?v=4ba2ada304344e4eab482769faa9075a)
-- [Font Size and Colour](https://www.notion.so/ce7f793eefe24a5da585420796a58a3a?v=83f6ef5cba9247a9beaf2c75cc834b38)
-- [Structure](https://www.notion.so/ce7f793eefe24a5da585420796a58a3a?v=4faa3131e6404fac817841a381d3a97d)
-- [Without Audio/Video](https://www.notion.so/ce7f793eefe24a5da585420796a58a3a?v=42b43626e84547b4ac404a3718bd4039)
-- [Audio/Video](https://www.notion.so/ce7f793eefe24a5da585420796a58a3a?v=696312cd4a3e44c99f4d64f01a25705f)
+- Default View (all WCAG success criteria)
+- Forms and UI
+- Custom Controls
+- Dynamic UI
+- Content
+- Font Size and Colour
+- Structure
+- Without Audio/Video
+- Audio/Video
 
 ### Using the tests
-Each test is written in a way which is clear to understand and straightforward to apply to web content, i.e. [accessibility guidance for font sizing](https://www.notion.so/ce7f793eefe24a5da585420796a58a3a?v=83f6ef5cba9247a9beaf2c75cc834b38):
+Each test is written in a way which is clear to understand and straightforward to apply to web content, i.e. accessibility guidance for font sizing:
 - `text smaller than 18.6px and bold has a minimum contrast ratio of 4.5:1 with the background colour`
 - `text at least 18.6px and bold has a minimum contrast ratio of 3:1 with the background colour`
 - `text smaller than 24px and not bold has a minimum contrast ratio of 4.5:1 with the background colour`
