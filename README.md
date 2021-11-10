@@ -5,8 +5,6 @@ The intention is to reduce the variance of testing for web accessibility between
 ## The Categories
 The success criteria are grouped according to what part of the website you're developing. Allowing you to focus on the relevant criteria you need to apply and understand when building or testing. 
 
-If your website doesn't have video or audio content you don't need to test against those criteria.
-
 - all (all WCAG success criteria)
 - content
 - custom Controls
