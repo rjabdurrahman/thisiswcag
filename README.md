@@ -64,5 +64,8 @@ All requests are welcomed and appreciated, but are included only after consensus
   
 This project is aimed at conveying facts. Tests should strive to avoid personal preferences for identifying accessibility failures.
 
+## Changelog
+This checklist is a living document where tests can change regularly, consult the changelog for details.
+  
 ## License
 MIT Licensed. Copyright (c) CANAXESS 2021.
