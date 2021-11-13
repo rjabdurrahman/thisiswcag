@@ -99,17 +99,17 @@ for (i of btns) {
 
 const hashstring = window.location.hash;
 switch(hashstring.replace('#',''))
-{
-	case 'content':
-	case 'custom controls':
-	case 'forms and UI':
-	case 'audio / visual':
+{	
+	case 'dynamic-content':
+	case 'custom-controls':
+	case 'forms-and-UI':
+	case 'audio-video':
 	case 'structure':
 	case 'colour':
-	case 'font-size':
-	case 'dynamic content':
+	case 'content':
 	case 'keyboard':
 	case 'link':
+	case 'font-size':
 		populateTable(wcagObj, hashstring.replace('#',''));
 		break;
 	default:
