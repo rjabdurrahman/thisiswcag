@@ -5,17 +5,17 @@ The intention is to reduce the variance of testing for web accessibility between
 ## The Categories
 The success criteria are grouped according to what part of the website you're developing. Allowing you to focus on the relevant criteria you need to apply and understand when building or testing. 
 
-- all (all WCAG success criteria)
-- content
-- custom Controls
-- forms and UI
-- audio / video
-- structure
-- colour
-- font-size
-- dynamic content
-- keyboard
-- link
+- [all](https://wcag-filter-tool.com/) (all WCAG success criteria)
+- [content](https://wcag-filter-tool.com/#content)
+- [custom controls](https://wcag-filter-tool.com/#custom-controls)
+- [forms and UI](https://wcag-filter-tool.com/#forms-and-UI)
+- [audio / video](https://wcag-filter-tool.com/#audio-video)
+- [structure](https://wcag-filter-tool.com/#structure)
+- [colour](https://wcag-filter-tool.com/#colour)
+- [font-size](https://wcag-filter-tool.com/#font-size)
+- [dynamic content](https://wcag-filter-tool.com/#dynamic-content)
+- [keyboard](https://wcag-filter-tool.com/#keyboard)
+- [link](https://wcag-filter-tool.com/#link)
 
 ### Using the tests
 Each test is written in a way which is clear to understand and straightforward to apply to web content. Accessibility guidance for font sizing:
