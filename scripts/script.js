@@ -97,4 +97,22 @@ for (i of btns) {
   });
 }
 
-populateTable(wcagObj, 'all');
+const hashstring = window.location.hash;
+switch(hashstring.replace('#',''))
+{
+	case 'content':
+	case 'custom controls':
+	case 'forms and UI':
+	case 'audio / visual':
+	case 'structure':
+	case 'colour':
+	case 'font-size':
+	case 'dynamic content':
+	case 'keyboard':
+	case 'link':
+		populateTable(wcagObj, hashstring.replace('#',''));
+		break;
+	default:
+		populateTable(wcagObj, 'all');
+		break;
+}
