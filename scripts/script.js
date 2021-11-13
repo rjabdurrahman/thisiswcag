@@ -17,14 +17,14 @@ function populateTable(obj, filter)
 		{
 			if (tests[i].hasOwnProperty(key)) 
 			{
-				if(key!=="link")
+				if(key!=='link')
 				{	
 					var val = tests[i][key];
 					var tableData = document.createElement('td');
 
 					if(tests[i].category.includes(filter) || filter == 'all')
 					{
-						if(key=="category")
+						if(key=='category')
 						{
 							returnedResults++;
 							for(let a = 0;a < tests[i][key].length; a++)
@@ -40,13 +40,13 @@ function populateTable(obj, filter)
 						}
 						else
 						{
-							if(key=="successCriteria")
+							if(key=='successCriteria')
 							{
 								const a = document.createElement('a');
 								const linkText = document.createTextNode(val);
 								a.appendChild(linkText);
 								a.title = val
-								a.target = "_blank";
+								a.target = '_blank';
 								a.href = tests[i].link;
 								
 								tableData.appendChild(a);
@@ -55,7 +55,7 @@ function populateTable(obj, filter)
 							{
 								switch(val)
 								{
-									case "A":
+									case 'A':
 										var cssSpan = document.createElement('span');
 										cssSpan.textContent = val;
 										cssSpan.classList.add('bg-success');
@@ -63,7 +63,7 @@ function populateTable(obj, filter)
 										cssSpan.classList.add('rounded-pill');
 										tableData.appendChild(cssSpan);
 										break;
-									case "AA":
+									case 'AA':
 										var cssSpan = document.createElement('span');
 										cssSpan.textContent = val;
 										cssSpan.classList.add('bg-danger');
@@ -78,11 +78,12 @@ function populateTable(obj, filter)
 							}
 						}				
 						tableRow.appendChild(tableData);
+						tableBody.appendChild(tableRow);
 					}
 				}
 			}
 		}
-		tableBody.appendChild(tableRow);
+		
 	}
 	resultsElement.textContent = returnedResults;
 }
