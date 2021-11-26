@@ -1,21 +1,21 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ab75b185-11bc-4956-bb80-59c01c12c120/deploy-status)](https://app.netlify.com/sites/wcag-filter-tool/deploys)
-# WCAG Filter Tool
+# This is WCAG
 The intention is to reduce the variance of testing for web accessibility between professionals and people who have an interest in accessibility. Agreeing on what constitutes a failure is the first step towards testing in a consistent way and having consistent results.
 
 ## The Categories
 The success criteria are grouped according to what part of the website you're developing. Allowing you to focus on the relevant criteria you need to apply and understand when building or testing. 
 
-- [all](https://wcag-filter-tool.com/) (all WCAG success criteria)
-- [content](https://wcag-filter-tool.com/#content)
-- [custom controls](https://wcag-filter-tool.com/#custom-controls)
-- [forms and UI](https://wcag-filter-tool.com/#forms-and-UI)
-- [audio / video](https://wcag-filter-tool.com/#audio-video)
-- [structure](https://wcag-filter-tool.com/#structure)
-- [colour](https://wcag-filter-tool.com/#colour)
-- [font-size](https://wcag-filter-tool.com/#font-size)
-- [dynamic content](https://wcag-filter-tool.com/#dynamic-content)
-- [keyboard](https://wcag-filter-tool.com/#keyboard)
-- [link](https://wcag-filter-tool.com/#link)
+- [all](https://thisiswcag.com/) (all WCAG success criteria)
+- [content](https://thisiswcag.com/#content)
+- [custom controls](https://thisiswcag.com/#custom-controls)
+- [forms and UI](https://thisiswcag.com/#forms-and-UI)
+- [audio / video](https://thisiswcag.com/#audio-video)
+- [structure](https://thisiswcag.com/#structure)
+- [colour](https://thisiswcag.com/#colour)
+- [font-size](https://thisiswcag.com/#font-size)
+- [dynamic content](https://thisiswcag.com/#dynamic-content)
+- [keyboard](https://thisiswcag.com/#keyboard)
+- [link](https://thisiswcag.com/#link)
 
 ### Using the tests
 Each test is written in a way which is clear to understand and straightforward to apply to web content. Accessibility guidance for font sizing:
@@ -61,7 +61,7 @@ All requests are welcomed and appreciated, but are included only after consensus
 This project is aimed at conveying facts. Tests should strive to avoid personal preferences for identifying accessibility failures.
 
 ## Changelog
-This checklist is a living document where tests can change regularly, consult the [changelog](https://github.com/canaxess/wcag-filter-tool/blob/main/CHANGELOG.md) for details.
+This checklist is a living document where tests can change regularly, consult the [changelog](https://github.com/canaxess/thisiswcag/blob/main/CHANGELOG.md) for details.
   
 ## License
 MIT Licensed. Copyright (c) CANAXESS 2021.
