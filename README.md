@@ -48,8 +48,7 @@ It's not a catch-all list for things which you feel _should_ be accessibility fa
 Disagree with any of the tests? great! All requests are welcomed and appreciated and there are several ways to contribute:
 - Create a PR and ammend the details in `data/json.js`
 - Log an issue in this repo, click "Issues" and follow the process of adding an issue
-- Send an email to ross.mullen@canaxess.com.au to indicate you disagree and want to alter a test/add a test
-- Send a Twitter DM to [@mrrossmullen](https://twitter.com/mrrossmullen?lang=en) to indicate you disagree and want to alter a test/add a test
+- Send a Twitter DM to [@thisiswcag](https://twitter.com/thisiswcag) to indicate you disagree and want to alter a test/add a test
 
 Not every request will be actioned. If your request is to add or ammend a test, you will need to justify how the test fails against WCAG. Non-sequential headings are not a WCAG 2.1 failure. 
 
@@ -62,4 +61,4 @@ This project is aimed at conveying facts. Tests should strive to avoid personal 
 This checklist is a living document where tests can change regularly, consult the [changelog](https://github.com/canaxess/thisiswcag/blob/main/CHANGELOG.md) for details.
   
 ## License
-MIT Licensed. Copyright (c) CANAXESS 2021.
+Copyright (c) CANAXESS 2021.
