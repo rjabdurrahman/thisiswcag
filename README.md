@@ -18,7 +18,7 @@ The success criteria are grouped according to what part of the website you're de
 - [link](https://thisiswcag.com/#link)
 
 ### Using the tests
-Each test is written in a way which is clear to understand and straightforward to apply to web content. Accessibility guidance for font sizing:
+Each test is written in a way which is clear to understand. Accessibility guidance for font sizing:
 - `text smaller than 18.6px and bold has a minimum contrast ratio of 4.5:1 with the background colour`
 - `text at least 18.6px and bold has a minimum contrast ratio of 3:1 with the background colour`
 - `text smaller than 24px and not bold has a minimum contrast ratio of 4.5:1 with the background colour`
@@ -42,10 +42,10 @@ Some tests are conditional:
 * 1.3.1 Info and Relationships - **and**, the `<fieldset>` must have a succinct `<legend>` element  
  
 ## What this list isn't
-It's not a catch-all list for things which you feel _should_ be accessibility failures but aren't. This is a list of what each WCAG 2.1 success criteria means and distilling that meaning into one or more tests. 
+It's not a catch-all list for things which you feel _should_ be accessibility failures but aren't. This is a list of what each WCAG 2.1 success criteria means in one or more tests. 
 
 ## Contributing
-Disagree with any of the tests? great! There are several ways to contribute:
+Disagree with any of the tests? great! All requests are welcomed and appreciated and there are several ways to contribute:
 - Create a PR and ammend the details in `data/json.js`
 - Log an issue in this repo, click "Issues" and follow the process of adding an issue
 - Send an email to ross.mullen@canaxess.com.au to indicate you disagree and want to alter a test/add a test
@@ -55,9 +55,7 @@ Not every request will be actioned. If your request is to add or ammend a test, 
 
 https://www.tpgi.com/heading-off-confusion-when-do-headings-fail-wcag/
 > WCAG techniques, such as H42: Using h1-h6 to identify headings and ARIA12: Using role=heading to identify headings, recommend that heading markup indicate the appropriate heading level for the content, but they don’t go so far as to define what’s “appropriate”—an issue that has been the subject of considerable discussion. So although hierarchical heading structures reflect a best practice, skipping heading levels does not represent a WCAG failure.
-
-All requests are welcomed and appreciated, but are included only after consensus amongst the community. 
-  
+ 
 This project is aimed at conveying facts. Tests should strive to avoid personal preferences for identifying accessibility failures.
 
 ## Changelog
