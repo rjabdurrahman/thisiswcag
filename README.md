@@ -1,6 +1,6 @@
 [![Netlify Status](https://api.netlify.com/api/v1/badges/ab75b185-11bc-4956-bb80-59c01c12c120/deploy-status)](https://app.netlify.com/sites/wcag-filter-tool/deploys)
 # This is WCAG
-WCAG success criteria in plain English. Understand what to build and test against consistently.
+WCAG success criteria in plain English. Understand how to build and test against WCAG consistently.
 
 ## The Categories
 The success criteria are grouped according to what part of the website you're developing. Allowing you to focus on the relevant criteria you need to apply and understand when building or testing. 
