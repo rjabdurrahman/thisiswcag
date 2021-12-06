@@ -61,5 +61,5 @@ This project is aimed at conveying facts. Tests should strive to avoid personal 
 This checklist is a living document where tests can change regularly, consult the [changelog](https://github.com/canaxess/thisiswcag/blob/main/CHANGELOG.md) for details.
   
 ## License
-This project is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/)<br>
+This project is licensed under a [Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)](https://creativecommons.org/licenses/by-nc/4.0/)<br>
 Copyright (c) CANAXESS 2021 
