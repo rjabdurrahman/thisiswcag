@@ -1,0 +1,23 @@
+{
+  "name": "thisiswcag",
+  "version": "1.0.0",
+  "description": "Listing of all WCAG tests",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/canaxess/thisiswcag.git"
+  },
+  "keywords": [
+    "a11y",
+    "accessibility"
+  ],
+  "author": "CANAXESS",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/canaxess/thisiswcag/issues"
+  },
+  "homepage": "https://github.com/canaxess/thisiswcag#readme"
+}

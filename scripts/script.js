@@ -32,7 +32,7 @@ function populateTable(obj, filter)
 								var cssSpan = document.createElement('span');
 								cssSpan.textContent = val[a];
 								
-								cssSpan.classList.add('bg-primary');
+								cssSpan.classList.add('badge-soft-primary');
 								cssSpan.classList.add('badge');
 								cssSpan.classList.add('rounded-pill');
 								tableData.appendChild(cssSpan);
@@ -58,7 +58,7 @@ function populateTable(obj, filter)
 									case 'A':
 										var cssSpan = document.createElement('span');
 										cssSpan.textContent = val;
-										cssSpan.classList.add('bg-success');
+										cssSpan.classList.add('badge-soft-success');
 										cssSpan.classList.add('badge');
 										cssSpan.classList.add('rounded-pill');
 										tableData.appendChild(cssSpan);
@@ -66,7 +66,7 @@ function populateTable(obj, filter)
 									case 'AA':
 										var cssSpan = document.createElement('span');
 										cssSpan.textContent = val;
-										cssSpan.classList.add('bg-danger');
+										cssSpan.classList.add('badge-soft-danger');
 										cssSpan.classList.add('badge');
 										cssSpan.classList.add('rounded-pill');
 										tableData.appendChild(cssSpan);
@@ -88,7 +88,7 @@ function populateTable(obj, filter)
 	resultsElement.textContent = returnedResults;
 }
 
-const btns = document.querySelectorAll('button');
+const btns = document.querySelectorAll('button:not([type=submit])');
 for (i of btns) {
   i.addEventListener('click', function(){
 	tableBody.innerHTML = '';
