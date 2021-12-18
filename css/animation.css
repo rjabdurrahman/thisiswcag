@@ -1,0 +1,27 @@
+#notification
+{
+    text-align: right;
+}
+
+.bell
+{
+    animation: animation 5000ms 2;
+    animation-delay: 5s;
+}
+
+@keyframes animation 
+{
+    0% { transform-origin: center top;transform: rotate(0deg);opacity:1; }
+    8.0% { transform-origin: center top;transform: rotate(0deg);opacity:1; }
+    12.0% { transform-origin: center top;transform: rotate(42deg);opacity:1; }
+    16.0% { transform-origin: center top;transform: rotate(-35deg);opacity:1; }
+    20.0% { transform-origin: center top;transform: rotate(0deg);opacity:1; }
+    23.0% { transform-origin: center top;transform: rotate(28deg);opacity:1; }
+    26.0% { transform-origin: center top;transform: rotate(-20deg);opacity:1; }
+    29.0% { transform-origin: center top;transform: rotate(0deg);opacity:1; }
+    31.0% { transform-origin: center top;transform: rotate(16deg);opacity:1; }
+    33.0% { transform-origin: center top;transform: rotate(-12deg);opacity:1; }
+    35.0% { transform-origin: center top;transform: rotate(0deg);opacity:1; }	
+    37.0% { transform-origin: center top;transform: rotate(-6deg);opacity:1; }
+    39.0% { transform-origin: center top;transform: rotate(0deg);opacity:1; }
+}
