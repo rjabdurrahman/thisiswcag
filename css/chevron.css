@@ -1,5 +1,5 @@
 .chevron-down {
-    display: none;
+    display: inline;
     box-sizing: border-box;
     position: relative;
     transform: scale(var(--ggs,1));
@@ -9,6 +9,7 @@
     border-radius: 100px
 }
 .chevron-down::after {
+    display: inline;
     content: "";
     box-sizing: border-box;
     position: absolute;
