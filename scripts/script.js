@@ -88,7 +88,7 @@ function populateTable(obj, filter)
 	resultsElement.textContent = returnedResults;
 }
 
-const btns = document.querySelectorAll('button:not([type=submit])');
+const btns = document.querySelectorAll('button:not([type=submit]).filter');
 for (i of btns) {
   i.addEventListener('click', function(){
 	tableBody.innerHTML = '';

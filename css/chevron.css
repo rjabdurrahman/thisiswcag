@@ -1,0 +1,35 @@
+.chevron-down {
+    box-sizing: border-box;
+    position: relative;
+    transform: scale(var(--ggs,1));
+    width: 22px;
+    height: 22px;
+    border: 2px solid transparent;
+    border-radius: 100px
+}
+.chevron-down::after {
+    content: "";
+    box-sizing: border-box;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-bottom: 2px solid;
+    border-right: 2px solid;
+    transform: rotate(45deg);
+    left: 10px;
+    top: 4px
+}
+
+.interactive-btn
+{
+    border:0px;
+    margin-top:0px !important;
+    padding:0px;
+}
+
+.interactive-btn h2
+{
+    background-color:#F9FAFD;
+    margin-bottom:0px;
+}
+

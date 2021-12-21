@@ -39,6 +39,7 @@
 <link href="./css/bootstrap.min.css" rel="stylesheet">
 <link href="./css/theme.css" rel="stylesheet">
 <link href="./css/animation.css" rel="stylesheet">
+<link href="./css/chevron.css" rel="stylesheet">
 
 </head>
 
@@ -68,17 +69,17 @@ td:nth-child(1) {width:310px}
 			<div class="col-lg-4 mb-3 pl-lg-2 pr-lg-2">
 				<div class="card mb-3">
 					<div class="card-body">
-						<button type="button" class="btn btn-primary btn-sm">all</button>
-						<button type="button" class="btn btn-secondary btn-sm">content</button>
-						<button type="button" class="btn btn-secondary btn-sm">custom-controls</button>
-						<button type="button" class="btn btn-secondary btn-sm">forms-and-UI</button>
-						<button type="button" class="btn btn-secondary btn-sm">audio-video</button>
-						<button type="button" class="btn btn-secondary btn-sm">structure</button>
-						<button type="button" class="btn btn-secondary btn-sm">colour</button>
-						<button type="button" class="btn btn-secondary btn-sm">font-size</button>
-						<button type="button" class="btn btn-secondary btn-sm">dynamic-content</button>
-						<button type="button" class="btn btn-secondary btn-sm">keyboard</button>
-						<button type="button" class="btn btn-secondary btn-sm">link</button>
+						<button type="button" class="btn btn-primary btn-sm filter">all</button>
+						<button type="button" class="btn btn-secondary btn-sm filter">content</button>
+						<button type="button" class="btn btn-secondary btn-sm filter">custom-controls</button>
+						<button type="button" class="btn btn-secondary btn-sm filter">forms-and-UI</button>
+						<button type="button" class="btn btn-secondary btn-sm filter">audio-video</button>
+						<button type="button" class="btn btn-secondary btn-sm filter">structure</button>
+						<button type="button" class="btn btn-secondary btn-sm filter">colour</button>
+						<button type="button" class="btn btn-secondary btn-sm filter">font-size</button>
+						<button type="button" class="btn btn-secondary btn-sm filter">dynamic-content</button>
+						<button type="button" class="btn btn-secondary btn-sm filter">keyboard</button>
+						<button type="button" class="btn btn-secondary btn-sm filter">link</button>
 					</div>
 				</div>
 
@@ -95,15 +96,15 @@ td:nth-child(1) {width:310px}
 
 			</div>
 			<div class="col-lg-4 mb-3 pl-lg-2 pr-lg-2">
-				<div class="card h-lg-100">
+				<div class="card h-lg-100" id="container1">
 					<div class="card-header bg-light">	
 						<div class="row mb-0">
-							<div class="col-12 mt-2">
-								<h2>WCAG in plain language</h2>
+							<div class="col-12 mt-2" style="height:26.36px">
+								<button class="interactive-btn" aria-expanded="true" aria-controls="content1" data-container="container1" data-heading="chevron1"><h2>WCAG in plain language <span class="chevron-down" aria-label="collapse" id="chevron1"></span></h2></button>
 							</div>
 						</div>
 					</div>
-					<div class="card-body">
+					<div class="card-body" id="content1">
 						<p>Build and test against WCAG consistently by understanding what is a failure against each success criteria.</p>
 						<p>These tests help you focus on the relevant criteria you need to apply and test against.</p>
 						<p>Disagree with any of the tests? put forward a change recommendation and <strong><a href="https://github.com/canaxess/wcag-filter-tool">raise a PR in the project repository</a></strong></p>
@@ -111,20 +112,20 @@ td:nth-child(1) {width:310px}
 				</div>
 			</div>
 			<div class="col-lg-4 mb-3 pl-lg-2 pr-lg-2">
-				<div class="card h-lg-100">
+				<div class="card h-lg-100" id="container2">
 					<div class="card-header bg-light">	
 						<div class="row mb-0">
 							<div class="col-10 mt-2">
-								<h2>Notify me</h2>
+								<button class="interactive-btn" aria-expanded="true" aria-controls="content2" data-container="container2" data-heading="chevron2"><h2>Notify me <span class="chevron-down" aria-label="collapse" id="chevron2"></span></h2></button>
 							</div>
 							<div class="col-2">
-								<div id="notification" class="">
+									<div id="notification" class="">
 									<svg class="bell svg-inline--fa fa-bell fa-w-14 fs-4" data-fa-transform="shrink-6" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="bell" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" data-fa-i2svg=""><g transform="translate(224 256)"><g transform="translate(0, 0)  scale(0.625, 0.625)  rotate(0 0 0)"><path fill="currentColor" d="M224 512c35.32 0 63.97-28.65 63.97-64H160.03c0 35.35 28.65 64 63.97 64zm215.39-149.71c-19.32-20.76-55.47-51.99-55.47-154.29 0-77.7-54.48-139.9-127.94-155.16V32c0-17.67-14.32-32-31.98-32s-31.98 14.33-31.98 32v20.84C118.56 68.1 64.08 130.3 64.08 208c0 102.3-36.15 133.53-55.47 154.29-6 6.45-8.66 14.16-8.61 21.71.11 16.4 12.98 32 32.1 32h383.8c19.12 0 32-15.6 32.1-32 .05-7.55-2.61-15.27-8.61-21.71z" transform="translate(-224 -256)"></path></g></g></svg>
 								</div>
 							</div>
 						</div>
 					</div>
-					<div class="card-body">
+					<div class="card-body" id="content2">
 						<p>Stay up to date whenever tests are added and updated.</p>
 
 						<form class="js-cm-form" id="subForm" action="https://www.createsend.com/t/subscribeerror?description=" method="post" data-id="92D4C54F0FEC16E5ADC2B1904DE9ED1A29AA9D65C05A9DF111696AC95D7D7DE484ACF1531E78D24B66E06697A446DEDE9D4FB11662254B376FC2972CD08D9524">
@@ -161,7 +162,7 @@ td:nth-child(1) {width:310px}
 	<footer class="bd-footer py-5 mt-2 bg-light">
 		<div class="container">
 			<div class="row">
-				<div class="col-sm-12 col-lg-12">
+				<div class="col-sm-12 col-lg-4">
 					<p>A <a href="http://www.canaxess.com.au">CANAXESS</a> Project<br>Licenced under <a href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons licence Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)</a></p>
 				</div>
 				<div class="col-sm-12 col-lg-12" style="margin-bottom:16px">
@@ -177,6 +178,7 @@ td:nth-child(1) {width:310px}
 <script src="./scripts/script.js" type="text/javascript"></script>
 <script src="./scripts/fontawesome/all.min.js" type="text/javascript"></script>
 <script src="./scripts/animation.js" type="text/javascript"></script>
+<script src="./scripts/script-control.js" type="text/javascript"></script>
 <script src="https://js.createsend1.com/javascript/copypastesubscribeformlogic.js" type="text/javascript"></script>
 
 </html>
