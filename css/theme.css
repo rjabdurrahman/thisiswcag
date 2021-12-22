@@ -4904,8 +4904,8 @@ fieldset:disabled .tox .tox-dialog__footer .tox-button--secondary,
 }
 .btn-secondary:hover {
   color: #fff;
-  background-color: #636e7e;
-  border-color: #5d6776;
+  background-color: #2271DB;
+  border-color: #2271DB;
 }
 .btn-check:focus + .btn-secondary, .btn-secondary:focus {
   color: #fff;
