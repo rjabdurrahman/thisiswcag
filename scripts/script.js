@@ -2,6 +2,22 @@ const tableBody = document.querySelector('tbody');
 const filteredBy = document.getElementById('filter');
 const wcagVersion = document.getElementById('wcagVersion');
 
+function focusButtons(obj)
+{
+	const cntrl = document.getElementById(obj);
+	const btns = document.querySelectorAll('button.filter');
+	for (i of btns) {
+		if(i.classList.contains('btn-primary'))
+		{
+			i.classList.add('btn-secondary');
+			i.classList.remove('btn-primary');
+		}
+	}
+
+	cntrl.classList.remove('btn-secondary');
+	cntrl.classList.add('btn-primary');
+}
+
 function populateTable(obj, filter)
 {
 	const resultsElement = document.getElementById('returnedResults');
@@ -93,6 +109,7 @@ for (i of btns) {
   i.addEventListener('click', function(){
 	tableBody.innerHTML = '';
 	populateTable(wcagObj,this.textContent);
+	focusButtons(this.textContent);
 	filteredBy.textContent = this.textContent;
   });
 }

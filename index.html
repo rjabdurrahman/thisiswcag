@@ -69,17 +69,17 @@ td:nth-child(1) {width:310px}
 			<div class="col-lg-4 mb-3 pl-lg-2 pr-lg-2">
 				<div class="card mb-3">
 					<div class="card-body">
-						<button type="button" class="btn btn-primary btn-sm filter">all</button>
-						<button type="button" class="btn btn-secondary btn-sm filter">content</button>
-						<button type="button" class="btn btn-secondary btn-sm filter">custom-controls</button>
-						<button type="button" class="btn btn-secondary btn-sm filter">forms-and-UI</button>
-						<button type="button" class="btn btn-secondary btn-sm filter">audio-video</button>
-						<button type="button" class="btn btn-secondary btn-sm filter">structure</button>
-						<button type="button" class="btn btn-secondary btn-sm filter">colour</button>
-						<button type="button" class="btn btn-secondary btn-sm filter">font-size</button>
-						<button type="button" class="btn btn-secondary btn-sm filter">dynamic-content</button>
-						<button type="button" class="btn btn-secondary btn-sm filter">keyboard</button>
-						<button type="button" class="btn btn-secondary btn-sm filter">link</button>
+						<button type="button" id="all" class="btn btn-primary btn-sm filter">all</button>
+						<button type="button" id="content" class="btn btn-secondary btn-sm filter">content</button>
+						<button type="button" id="custom-controls" class="btn btn-secondary btn-sm filter">custom-controls</button>
+						<button type="button" id="forms-and-UI" class="btn btn-secondary btn-sm filter">forms-and-UI</button>
+						<button type="button" id="audio-video" class="btn btn-secondary btn-sm filter">audio-video</button>
+						<button type="button" id="structure" class="btn btn-secondary btn-sm filter">structure</button>
+						<button type="button" id="colour" class="btn btn-secondary btn-sm filter">colour</button>
+						<button type="button" id="font-size" class="btn btn-secondary btn-sm filter">font-size</button>
+						<button type="button" id="dynamic-content" class="btn btn-secondary btn-sm filter">dynamic-content</button>
+						<button type="button" id="keyboard" class="btn btn-secondary btn-sm filter">keyboard</button>
+						<button type="button" id="link" class="btn btn-secondary btn-sm filter">link</button>
 					</div>
 				</div>
 
@@ -100,7 +100,8 @@ td:nth-child(1) {width:310px}
 					<div class="card-header bg-light">	
 						<div class="row mb-0">
 							<div class="col-12 mt-2" style="height:26.36px">
-								<button class="interactive-btn" aria-expanded="true" aria-controls="content1" data-container="container1" data-heading="chevron1"><h2>WCAG in plain language <span class="chevron-down" aria-label="collapse" id="chevron1">&nbsp;</span></h2></button>
+								<div class="d-block d-md-block d-lg-none d-xl-none d-xxl-none"><button class="interactive-btn" aria-expanded="true" aria-controls="content1" data-container="container1" data-heading="chevron1"><h2>WCAG in plain language <span class="chevron-down" aria-label="collapse" id="chevron1">&nbsp;</span></h2></button></div>
+								<div class="d-none d-lg-block"><h2>WCAG in plain language</h2></div>
 							</div>
 						</div>
 					</div>
@@ -116,7 +117,8 @@ td:nth-child(1) {width:310px}
 					<div class="card-header bg-light">	
 						<div class="row mb-0">
 							<div class="col-10 mt-2">
-								<button class="interactive-btn" aria-expanded="true" aria-controls="content2" data-container="container2" data-heading="chevron2"><h2>Notify me <span class="chevron-down" aria-label="collapse" id="chevron2">&nbsp;</span></h2></button>
+								<div class="d-block d-md-block d-lg-none d-xl-none d-xxl-none"><button class="interactive-btn" aria-expanded="true" aria-controls="content2" data-container="container2" data-heading="chevron2"><h2>Notify me <span class="chevron-down" aria-label="collapse" id="chevron2">&nbsp;</span></h2></button></div>
+								<div class="d-none d-lg-block"><h2>Notify me</h2></div>
 							</div>
 							<div class="col-2">
 									<div id="notification" class="">
