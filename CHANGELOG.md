@@ -1,3 +1,5 @@
 # Changes to tests
 ## 09/11/2021
-- Updated datatables test replacing summary attribute with caption element
+- Updated data tables test replacing check for `summary` attribute with a check for the `caption` element (line 22).
+## 22/12/2021
+- Updated status messages test to add the category `dynamic-content`
