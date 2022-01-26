@@ -2,6 +2,10 @@
 # This is WCAG
 WCAG success criteria in plain language. Understand how to build and test against WCAG consistently.
 
+[thisiswcag.com](https://thisiswcag.com/) is a starting point when building against WCAG 2.1. Many of the tests have made arbitary decisions for things which must be done to be conformant. Regular community feedback is shaping each of the tests to give sufficient guidance for people new to accessibility yet flexible enough for alternative techniques to be applied.
+
+This project is aimed at conveying facts. Tests strive to avoid personal preferences for identifying accessibility failures.
+
 ## The Categories
 The success criteria are grouped according to what part of the website you're developing. Allowing you to focus on the relevant criteria you need to apply and understand when building or testing. 
 
@@ -56,12 +60,8 @@ https://www.tpgi.com/heading-off-confusion-when-do-headings-fail-wcag/
 > WCAG techniques, such as H42: Using h1-h6 to identify headings and ARIA12: Using role=heading to identify headings, recommend that heading markup indicate the appropriate heading level for the content, but they don’t go so far as to define what’s “appropriate”—an issue that has been the subject of considerable discussion. So although hierarchical heading structures reflect a best practice, skipping heading levels does not represent a WCAG failure.
  
 ## Changelog
-[thisiswcag.com](https://thisiswcag.com/) is a starting point when building against WCAG 2.1. Many of the tests have made arbitary decisions for things which must be done to be conformant. Regular community feedback is shaping each of the tests to give sufficient guidance for people new to accessibiltiy yet flexible enough for alternative techniques to be applied. 
-  
 This checklist is a living document where tests can change regularly, consult the [changelog](https://github.com/canaxess/thisiswcag/blob/main/CHANGELOG.md) for details.
   
-This project is aimed at conveying facts. Tests strive to avoid personal preferences for identifying accessibility failures.
-
 ## License
 Licenced under [Creative Commons licence Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)](https://creativecommons.org/licenses/by-sa/4.0/)<br>
 Copyright (c) CANAXESS 2021 
