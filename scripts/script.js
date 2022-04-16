@@ -1,25 +1,11 @@
 const tableBody = document.querySelector('tbody');
 const filteredBy = document.getElementById('filter');
 const wcagVersion = document.getElementById('wcagVersion');
+let selectedLevels = [], selectedVersions= [], selectedCategory=[];
 
-function focusButtons(obj)
+function populateTable(obj)
 {
-	const cntrl = document.getElementById(obj);
-	const btns = document.querySelectorAll('button.filter');
-	for (i of btns) {
-		if(i.classList.contains('btn-primary'))
-		{
-			i.classList.add('btn-secondary');
-			i.classList.remove('btn-primary');
-		}
-	}
-
-	cntrl.classList.remove('btn-secondary');
-	cntrl.classList.add('btn-primary');
-}
-
-function populateTable(obj, filter)
-{
+	tableBody.innerHTML = '';
 	const resultsElement = document.getElementById('returnedResults');
 	const tests = obj['tests'];
 	var returnedResults = 0;
@@ -37,8 +23,12 @@ function populateTable(obj, filter)
 				{	
 					var val = tests[i][key];
 					var tableData = document.createElement('td');
-
-					if(tests[i].category.includes(filter) || filter == 'all')
+					let filterCondition = 
+					(!selectedLevels.length || selectedLevels.indexOf(tests[i].wcagLevel) >= 0) && 
+					(!selectedVersions.length || selectedVersions.indexOf(tests[i].wcagVersion) >= 0) &&
+					(!selectedCategory.length || selectedCategory.filter(x => tests[i].category.indexOf(x) >= 0).length )
+					// Work Here
+					if(filterCondition)
 					{
 						if(key=='category')
 						{
@@ -104,16 +94,26 @@ function populateTable(obj, filter)
 	resultsElement.textContent = returnedResults;
 }
 
-const btns = document.querySelectorAll('button:not([type=submit]).filter');
-for (i of btns) {
-  i.addEventListener('click', function(){
-	tableBody.innerHTML = '';
-	populateTable(wcagObj,this.textContent);
-	focusButtons(this.textContent);
-	filteredBy.textContent = this.textContent;
-  });
+function levelFilter(e){
+	let allLevelCheckboxes = document.querySelectorAll("." + e.target.classList[1])
+	selectedLevels = Array.from(allLevelCheckboxes).filter(x => x.checked).map(x => x.name);
+	console.log(selectedLevels, selectedVersions, selectedCategory)
+	populateTable(wcagObj);
 }
 
+function versionFilter(e){
+	let allVersionCheckboxes = document.querySelectorAll("." + e.target.classList[1])
+	selectedVersions = Array.from(allVersionCheckboxes).filter(x => x.checked).map(x => x.name);
+	console.log(selectedLevels, selectedVersions, selectedCategory)
+	populateTable(wcagObj);
+}
+
+function categoryFilter(e){
+	let allCategoryCheckboxes = document.querySelectorAll("." + e.target.classList[1])
+	selectedCategory = Array.from(allCategoryCheckboxes).filter(x => x.checked).map(x => x.name);
+	console.log(selectedLevels, selectedVersions, selectedCategory)
+	populateTable(wcagObj);
+}
 const hashstring = window.location.hash;
 switch(hashstring.replace('#',''))
 {	
