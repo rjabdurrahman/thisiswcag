@@ -5,3 +5,13 @@ legend{	margin-top: 5px;font-size:inherit;}
 h2 {font-size: inherit;}
 .table>:not(:first-child) {border-top: inherit;}
 td:nth-child(1) {width:310px}
+
+#levels input, #levels label{
+    cursor: pointer;
+}
+#versions input, #versions label{
+    cursor: pointer;
+}
+#categories input, #categories label{
+    cursor: pointer;
+}

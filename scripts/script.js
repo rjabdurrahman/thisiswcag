@@ -3,16 +3,30 @@ const filteredBy = document.getElementById('filter');
 const wcagVersion = document.getElementById('wcagVersion');
 let selectedLevels = [], selectedVersions = [], selectedCategory = [];
 // Filter Uniqu Values
-let uniqeLevels = [...new Set(wcagObj['tests'].map(x => x.wcagLevel))];
-let uniqeLVersions = [...new Set(wcagObj['tests'].map(x => x.wcagVersion))];
+let uniqeLevels = [
+	...new Set([
+		...wcagObj['tests'].map(x => x.wcagLevel),
+		'A',
+		'AA',
+		'AAA'
+	])
+];
+let uniqeLVersions = [
+	...new Set([
+		...wcagObj['tests'].map(x => x.wcagVersion),
+		'2.0',
+		'2.1',
+		'2.2',
+	])
+];
 let uniqeCategories = [...new Set(wcagObj['tests'].map(x => x.category).flat())];
 
 uniqeLevels.forEach(level => {
 	document.getElementById('levels').innerHTML += `
 	<div class="form-check">
-		<input name="${level}" onchange="levelFilter(event)" class="form-check-input level-selector"
+		<input id="level_${level}" name="${level}" onchange="levelFilter(event)" class="form-check-input level-selector"
 			type="checkbox">
-		<label class="form-check-label" for="flexCheckDefault">
+		<label for="level_${level}" class="form-check-label" for="flexCheckDefault">
 			${level}
 		</label>
 	</div>
@@ -22,9 +36,9 @@ uniqeLevels.forEach(level => {
 uniqeLVersions.forEach(version => {
 	document.getElementById('versions').innerHTML += `
 	<div class="form-check">
-		<input name="${version}" onchange="versionFilter(event)"
+		<input id="version_${version}" name="${version}" onchange="versionFilter(event)"
 			class="form-check-input version-selector" type="checkbox">
-		<label class="form-check-label" for="flexCheckDefault">
+		<label for="version_${version}" class="form-check-label" for="flexCheckDefault">
 			${version}
 		</label>
 	</div>
@@ -34,9 +48,9 @@ uniqeLVersions.forEach(version => {
 uniqeCategories.forEach(category => {
 	document.getElementById('categories').innerHTML += `
 	<div class="form-check">
-		<input name="${category}" onchange="categoryFilter(event)"
+		<input id="category_${category}" name="${category}" onchange="categoryFilter(event)"
 			class="form-check-input category-selector" type="checkbox">
-		<label class="form-check-label" for="flexCheckDefault">
+		<label for="category_${category}" class="form-check-label" for="flexCheckDefault">
 			${category}
 		</label>
 	</div>
