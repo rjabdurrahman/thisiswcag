@@ -6,6 +6,10 @@ h2 {font-size: inherit;}
 .table>:not(:first-child) {border-top: inherit;}
 td:nth-child(1) {width:310px}
 
+.form-check-input {
+    margin-top: 6px !important;
+}
+
 #levels input, #levels label{
     cursor: pointer;
 }
@@ -14,4 +18,19 @@ td:nth-child(1) {width:310px}
 }
 #categories input, #categories label{
     cursor: pointer;
+}
+
+.category-container {
+    margin-top: 12px;
+}
+
+@media screen and (max-width: 768px) {
+    #categories {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+#categories {
+    display: grid;
+    grid-template-columns: auto auto;
 }

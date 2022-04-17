@@ -23,10 +23,10 @@ let uniqeCategories = [...new Set(wcagObj['tests'].map(x => x.category).flat())]
 
 uniqeLevels.forEach(level => {
 	document.getElementById('levels').innerHTML += `
-	<div class="form-check">
+	<div>
 		<input id="level_${level}" name="${level}" onchange="levelFilter(event)" class="form-check-input level-selector"
 			type="checkbox">
-		<label for="level_${level}" class="form-check-label" for="flexCheckDefault">
+		<label for="level_${level}" for="flexCheckDefault">
 			${level}
 		</label>
 	</div>
@@ -35,10 +35,10 @@ uniqeLevels.forEach(level => {
 
 uniqeLVersions.forEach(version => {
 	document.getElementById('versions').innerHTML += `
-	<div class="form-check">
+	<div>
 		<input id="version_${version}" name="${version}" onchange="versionFilter(event)"
 			class="form-check-input version-selector" type="checkbox">
-		<label for="version_${version}" class="form-check-label" for="flexCheckDefault">
+		<label for="version_${version}" for="flexCheckDefault">
 			${version}
 		</label>
 	</div>
@@ -47,10 +47,10 @@ uniqeLVersions.forEach(version => {
 
 uniqeCategories.forEach(category => {
 	document.getElementById('categories').innerHTML += `
-	<div class="form-check">
+	<div>
 		<input id="category_${category}" name="${category}" onchange="categoryFilter(event)"
 			class="form-check-input category-selector" type="checkbox">
-		<label for="category_${category}" class="form-check-label" for="flexCheckDefault">
+		<label for="category_${category}" for="flexCheckDefault">
 			${category}
 		</label>
 	</div>
