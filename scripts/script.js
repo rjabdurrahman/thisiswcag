@@ -105,9 +105,7 @@ function populateTable(obj) {
 								tests[i].test = urlify(tests[i].test)
 								.replace('or, ', '<strong>or, </strong>')
 								.replace('and, ', '<strong>and, </strong>')
-								const spanEl = document.createElement('span');
-								spanEl.innerHTML = tests[i].test;
-								tableData.appendChild(spanEl);
+								tableData.innerHTML = tests[i].test;
 							}
 							else {
 								switch (val) {
