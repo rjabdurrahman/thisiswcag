@@ -101,6 +101,14 @@ function populateTable(obj) {
 
 								tableData.appendChild(a);
 							}
+							else if (key == 'test') {
+								tests[i].test = urlify(tests[i].test)
+								.replace('or, ', '<strong>or, </strong>')
+								.replace('and, ', '<strong>and, </strong>')
+								const spanEl = document.createElement('span');
+								spanEl.innerHTML = tests[i].test;
+								tableData.appendChild(spanEl);
+							}
 							else {
 								switch (val) {
 									case 'A':
@@ -173,4 +181,11 @@ switch (hashstring.replace('#', '')) {
 	default:
 		populateTable(wcagObj, 'all');
 		break;
+}
+
+function urlify(text) {
+	let urlRegex = /(https?:\/\/[^\s]+)/g;
+	return text.replace(urlRegex, function (url) {
+		return '<a href="' + url + '">' + url + '</a>';
+	})
 }
