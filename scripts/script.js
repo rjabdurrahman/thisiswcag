@@ -185,7 +185,10 @@ switch (hashstring.replace('#', '')) {
 
 function urlify(text) {
 	let urlRegex = /(https?:\/\/[^\s]+)/g;
-	return text.replace(urlRegex, function (url) {
+	return text
+	.replace(/</g, '&lt;')
+	.replace(/>/g, '&gt;')
+	.replace(urlRegex, function (url) {
 		return '<a href="' + url + '">' + url + '</a>';
 	})
 }
