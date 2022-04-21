@@ -2,37 +2,43 @@ const tableBody = document.querySelector('tbody');
 const filteredBy = document.getElementById('filter');
 const wcagVersion = document.getElementById('wcagVersion');
 let selectedLevels = [], selectedVersions = [], selectedCategory = [];
-// Filter Uniqu Values
 let uniqeLevels = [
+	// Filter Uniqu Levels
 	...new Set([
 		...wcagObj['tests'].map(x => x.wcagLevel),
+		// Keep at lease this levels
 		'A',
 		'AA',
 		'AAA'
 	])
 ];
+// Filter Uniqu Versions
 let uniqeLVersions = [
 	...new Set([
 		...wcagObj['tests'].map(x => x.wcagVersion),
+		// Keep at least this versions
 		'2.0',
 		'2.1',
 		'2.2',
 	])
 ];
+// Filter Uniqu Categories
 let uniqeCategories = [...new Set(wcagObj['tests'].map(x => x.category).flat())];
 
+// Create and Show Levels in HTML
 uniqeLevels.forEach(level => {
 	document.getElementById('levels').innerHTML += `
 	<div>
 		<input id="level_${level}" name="${level}" onchange="levelFilter(event)" class="form-check-input level-selector"
-			type="checkbox">
+		type="checkbox">
 		<label for="level_${level}" for="flexCheckDefault">
-			${level}
+		${level}
 		</label>
 	</div>
 	`
 })
 
+// Create and Show Versions in HTML
 uniqeLVersions.forEach(version => {
 	document.getElementById('versions').innerHTML += `
 	<div>
@@ -45,6 +51,7 @@ uniqeLVersions.forEach(version => {
 	`
 })
 
+// Create and Show Categories in HTML
 uniqeCategories.forEach(category => {
 	document.getElementById('categories').innerHTML += `
 	<div>
@@ -57,6 +64,7 @@ uniqeCategories.forEach(category => {
 	`
 })
 
+// Create Table Row for each data
 function populateTable(obj) {
 	tableBody.innerHTML = '';
 	const resultsElement = document.getElementById('returnedResults');
@@ -72,11 +80,13 @@ function populateTable(obj) {
 				if (key !== 'link') {
 					var val = tests[i][key];
 					var tableData = document.createElement('td');
+					// Joined Filter Condition for Levels, Versions and Categories
 					let filterCondition =
+						// If any level, version or category selected check the data matched with the selections
 						(!selectedLevels.length || selectedLevels.indexOf(tests[i].wcagLevel) >= 0) &&
 						(!selectedVersions.length || selectedVersions.indexOf(tests[i].wcagVersion) >= 0) &&
 						(!selectedCategory.length || selectedCategory.filter(x => tests[i].category.indexOf(x) >= 0).length)
-					// Work Here
+					// Keep data if matched with the filer condition the show it in table
 					if (filterCondition) {
 						if (key == 'category') {
 							returnedResults++;
@@ -102,12 +112,16 @@ function populateTable(obj) {
 								tableData.appendChild(a);
 							}
 							else if (key == 'test') {
+								// Create URL from text
 								tests[i].test = urlify(tests[i].test)
-								.replace('or, ', '<strong>or, </strong>')
-								.replace('and, ', '<strong>and, </strong>')
+									// Create or, with HTML element wrap
+									.replace('or, ', '<strong>or, </strong>')
+									// Create and, with HTML element wrap
+									.replace('and, ', '<strong>and, </strong>')
 								tableData.innerHTML = tests[i].test;
 							}
 							else {
+								// Level style by DOM Element
 								switch (val) {
 									case 'A':
 										var cssSpan = document.createElement('span');
@@ -131,6 +145,7 @@ function populateTable(obj) {
 								}
 							}
 						}
+						// Adding row in HTML table
 						tableRow.appendChild(tableData);
 						tableBody.appendChild(tableRow);
 					}
@@ -142,51 +157,43 @@ function populateTable(obj) {
 	resultsElement.textContent = returnedResults;
 }
 
+// Getting selected levels
 function levelFilter(e) {
 	let allLevelCheckboxes = document.querySelectorAll("." + e.target.classList[1])
 	selectedLevels = Array.from(allLevelCheckboxes).filter(x => x.checked).map(x => x.name);
-	console.log(selectedLevels, selectedVersions, selectedCategory)
+	// console.log(selectedLevels)
 	populateTable(wcagObj);
 }
 
+// Getting selected versions
 function versionFilter(e) {
 	let allVersionCheckboxes = document.querySelectorAll("." + e.target.classList[1])
 	selectedVersions = Array.from(allVersionCheckboxes).filter(x => x.checked).map(x => x.name);
-	console.log(selectedLevels, selectedVersions, selectedCategory)
+	// console.log(selectedVersions)
 	populateTable(wcagObj);
 }
 
+// Getting selected categories
 function categoryFilter(e) {
 	let allCategoryCheckboxes = document.querySelectorAll("." + e.target.classList[1])
 	selectedCategory = Array.from(allCategoryCheckboxes).filter(x => x.checked).map(x => x.name);
-	console.log(selectedLevels, selectedVersions, selectedCategory)
+	// console.log(selectedCategory)
 	populateTable(wcagObj);
 }
-const hashstring = window.location.hash;
-switch (hashstring.replace('#', '')) {
-	case 'dynamic-content':
-	case 'custom-controls':
-	case 'forms-and-UI':
-	case 'audio-video':
-	case 'structure':
-	case 'colour':
-	case 'content':
-	case 'keyboard':
-	case 'link':
-	case 'font-size':
-		populateTable(wcagObj, hashstring.replace('#', ''));
-		break;
-	default:
-		populateTable(wcagObj, 'all');
-		break;
-}
 
+// Show table with all data
+populateTable(wcagObj, 'all');
+
+// Create URL from text
 function urlify(text) {
 	let urlRegex = /(https?:\/\/[^\s]+)/g;
 	return text
-	.replace(/</g, '&lt;')
-	.replace(/>/g, '&gt;')
-	.replace(urlRegex, function (url) {
-		return '<a href="' + url + '">' + url + '</a>';
-	})
+		// Reglar Expression Used
+		// < and > are HTML keyword, so replace those by changing HTML scape
+		.replace(/</g, '&lt;')
+		.replace(/>/g, '&gt;')
+		// replace url to HTML element
+		.replace(urlRegex, function (url) {
+			return '<a href="' + url + '">' + url + '</a>';
+		})
 }
