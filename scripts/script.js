@@ -67,6 +67,7 @@ uniqeCategories.forEach(category => {
 // Show filtered by
 function showFiltersOnUI() {
 	let filterEl = document.getElementById('filter');
+	// Joined filters value by comma or show dash
 	filterEl.innerHTML = [selectedLevels, selectedVersions, selectedCategory].flat().join(', ') || '------'
 }
 
