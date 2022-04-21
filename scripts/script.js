@@ -112,13 +112,15 @@ function populateTable(obj) {
 								tableData.appendChild(a);
 							}
 							else if (key == 'test') {
-								// Create URL from text
-								tests[i].test = urlify(tests[i].test)
-									// Create or, with HTML element wrap
-									.replace('or, ', '<strong>or, </strong>')
-									// Create and, with HTML element wrap
-									.replace('and, ', '<strong>and, </strong>')
-								tableData.innerHTML = tests[i].test;
+								const spanEl = document.createElement('span');
+								// Create URL and, or, strong from text and insert into span node
+								spanEl.innerHTML = urlify(tests[i].test)
+								// Create or, with HTML element wrap
+								.replace('or, ', '<strong>or, </strong>')
+								// Create and, with HTML element wrap
+								.replace('and, ', '<strong>and, </strong>')
+								// Append Child into table data (td)
+								tableData.appendChild(spanEl);
 							}
 							else {
 								// Level style by DOM Element
