@@ -64,8 +64,15 @@ uniqeCategories.forEach(category => {
 	`
 })
 
+// Show filtered by
+function showFiltersOnUI() {
+	let filterEl = document.getElementById('filter');
+	filterEl.innerHTML = [selectedLevels, selectedVersions, selectedCategory].flat().join(', ') || '------'
+}
+
 // Create Table Row for each data
 function populateTable(obj) {
+	showFiltersOnUI();
 	tableBody.innerHTML = '';
 	const resultsElement = document.getElementById('returnedResults');
 	const tests = obj['tests'];
